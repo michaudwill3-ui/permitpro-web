@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { TRADES, STATES, CITIES, getJobTypes, getChecklist } from "./data/permits";
+import { getMaterials } from "./data/materials";
 
 type Screen = "form" | "results";
 
@@ -17,6 +18,7 @@ export default function Home() {
   const cities = state ? (CITIES[state] || []) : [];
   const canGenerate = trade && job;
   const checklist = screen === "results" ? getChecklist(trade, job, state, city) : null;
+  const materials = screen === "results" ? getMaterials(trade, job) : [];
 
   function generate() { setChecked(new Set()); setScreen("results"); }
   function reset() { setScreen("form"); setTrade(""); setJob(""); setState(""); setCity(""); setChecked(new Set()); }
@@ -148,6 +150,25 @@ export default function Home() {
               <div className="card" style={{ color: "#888", fontSize: 13 }}>No permits required for this job type.</div>
             )}
           </div>
+
+          {materials.length > 0 && (
+            <div>
+              <span className="label">Code-Required Materials & Specs</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {materials.map((mat, i) => (
+                  <div key={i} className="card" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: 13, fontWeight: 700 }}>{mat.item}</div>
+                      <div style={{ fontSize: 12, color: "#ccc", marginTop: 3 }}>{mat.spec}</div>
+                    </div>
+                    {mat.code && (
+                      <span style={{ fontSize: 11, color: "#FDB913", fontWeight: 700, whiteSpace: "nowrap", marginTop: 2 }}>{mat.code}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <button onClick={reset} style={{ background: "transparent", border: "1px solid #333", color: "#fff", borderRadius: 6, padding: "12px 24px", fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, letterSpacing: "0.05em", textTransform: "uppercase" }}>
             ← New Search
