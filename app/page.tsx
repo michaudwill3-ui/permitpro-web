@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <div style={{ width: "100%", maxWidth: 1200, margin: "0 auto", minHeight: "100vh", paddingBottom: 40 }}>
-      <div style={{ background: "#000", padding: "16px 20px 12px", borderBottom: "1px solid #222", position: "sticky", top: 0, zIndex: 10 }}>
+      <div style={{ background: "#000", padding: "16px 20px 12px", textAlign: "center", borderBottom: "1px solid #222", position: "sticky", top: 0, zIndex: 10 }}>
         <Image src="/logo.png" alt="PermitPro" width={180} height={45} style={{ objectFit: "contain" }} priority />
       </div>
 
