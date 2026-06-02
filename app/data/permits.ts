@@ -1,3 +1,4 @@
+import { getDeptPhone } from "./dept_phones";
 export interface PermitRequirement {
   permitName: string;
   department: string;
