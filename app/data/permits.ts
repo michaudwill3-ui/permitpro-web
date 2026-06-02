@@ -1,4 +1,5 @@
 import { getDeptPhone } from "./dept_phones";
+
 export interface PermitRequirement {
   permitName: string;
   department: string;
@@ -333,9 +334,18 @@ export function getChecklist(trade: string, jobType: string, state: string, city
 
   const [safetyAlerts, permits] = data;
 
-  const statePhones = STATE_PHONES[state] || {};
-  const phone = city ? (statePhones[city] || "") : "";
-  const enrichedPermits = permits.map(permit => ({ ...permit, phone }));
+  const buildingPhone = city && state ? (STATE_PHONES[state]?.[city] || "") : "";
+
+  const enrichedPermits = permits.map(permit => {
+    const dept = permit.department.toLowerCase();
+    let phone = "";
+    if (dept.includes("building") || dept === "building") {
+      phone = buildingPhone;
+    } else {
+      phone = getDeptPhone(permit.department, state, city);
+    }
+    return { ...permit, phone };
+  });
 
   return { safetyAlerts, permits: enrichedPermits };
 }
