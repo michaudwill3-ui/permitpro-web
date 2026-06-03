@@ -35,6 +35,7 @@ export default function Gate() {
       <div style={{ width: "100%", maxWidth: 420 }}>
         <div style={{ textAlign: "center", marginBottom: 40, display: "flex", justifyContent: "center" }}>
           <div style={{ display: "flex", justifyContent: "center" }}><Image src="/logo.png" alt="PermitPro" width={200} height={50} style={{ objectFit: "contain" }} priority /></div>
+        <div style={{ fontSize: 12, color: "#888", textAlign: "center", marginTop: 10, letterSpacing: "0.04em" }}>The permit intelligence platform for contractors.</div>
         </div>
         <div style={{ background: "#111", border: "1px solid #222", borderRadius: 10, padding: 32 }}>
           <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 6 }}>Enter Access Code</div>
