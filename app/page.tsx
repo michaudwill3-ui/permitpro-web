@@ -16,7 +16,7 @@ ${safetyAlerts.length>0?`<h2>Safety Alerts</h2>${safetyAlerts.map(a=>`<div class
 <h2>Permits Required</h2>
 ${permits.map(p=>`<div class="item"><div class="item-title">${p.permitName}</div><div class="item-sub">${p.department} Dept.</div>${p.description?`<div class="item-desc">${p.description}</div>`:""}<div class="item-footer">${p.phone?`📞 ${p.phone} &nbsp;|&nbsp; `:""}Est. ${p.estimatedDays} days</div></div>`).join("")}
 ${materials.length>0?`<h2>Code-Required Materials & Specs</h2>${materials.map(m=>`<div class="item"><div class="item-title">${m.item}</div><div class="item-desc">${m.spec}</div>${m.code?`<div class="item-sub">${m.code}</div>`:""}</div>`).join("")}`:""}
-<div class="footer">PermitPro is an informational tool only. This checklist is not legal, governmental, or safety advice. Always verify all permit requirements, codes, and safety standards with the appropriate local authorities before starting any work. PermitPro assumes no liability for errors, omissions, or reliance on this information.</div>
+<div class="footer">DISCLAIMER: PermitPro is an informational tool only. This checklist is not legal, governmental, or safety advice. Permit requirements, codes, and safety standards vary by jurisdiction and change frequently. Always verify all requirements with the appropriate local, state, and federal authorities before starting any work. PermitPro and its operators assume no liability for errors, omissions, inaccuracies, or any reliance placed on this information.</div>
 </body></html>`;
   const w = window.open("","_blank");
   if (!w) return;
@@ -206,6 +206,9 @@ export default function Home() {
             </div>
           )}
 
+                    <div style={{ fontSize: 11, color: "#555", lineHeight: 1.6, padding: "14px 0", borderTop: "1px solid #222", marginTop: 8 }}>
+            <strong style={{ color: "#888" }}>DISCLAIMER:</strong> PermitPro is an informational tool only. This checklist is not legal, governmental, or safety advice. Permit requirements, codes, and safety standards vary by jurisdiction and change frequently. Always verify all requirements with the appropriate local, state, and federal authorities before starting any work. PermitPro and its operators assume no liability for errors, omissions, inaccuracies, or any reliance placed on this information.
+          </div>
           <button onClick={reset} style={{ background: "transparent", border: "1px solid #333", color: "#fff", borderRadius: 6, padding: "12px 24px", fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, letterSpacing: "0.05em", textTransform: "uppercase" }}>
             ← New Search
           </button>
