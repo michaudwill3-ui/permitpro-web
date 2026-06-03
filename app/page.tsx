@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { TRADES, STATES, CITIES, getJobTypes, getChecklist } from "./data/permits";
 import { getMaterials } from "./data/materials";
@@ -27,6 +27,11 @@ ${materials.length>0?`<h2>Code-Required Materials & Specs</h2>${materials.map(m=
 }
 
 export default function Home() {
+  useEffect(() => {
+    const access = sessionStorage.getItem("pp_access");
+    if (!access) window.location.href = "/gate";
+  }, []);
+
   const [screen, setScreen] = useState<Screen>("form");
   const [trade, setTrade] = useState("");
   const [job, setJob] = useState("");
