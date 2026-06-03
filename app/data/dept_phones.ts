@@ -104,6 +104,9 @@ export const CITY_TO_COUNTY: Record<string, Record<string, string>> = {
     "St. Albans":"Franklin","St. Johnsbury":"Caledonia","Swanton":"Franklin","Waterbury":"Washington",
     "White River Junction":"Windsor","Winooski":"Chittenden","Woodstock":"Windsor",
   },
+  FL: {
+    "Alachua":"Alachua","Altamonte Springs":"Seminole","Apopka":"Orange","Aventura":"Miami-Dade","Bartow":"Polk","Belle Glade":"Palm Beach","Boca Raton":"Palm Beach","Boynton Beach":"Palm Beach","Bradenton":"Manatee","Brooksville":"Hernando","Cape Coral":"Lee","Clearwater":"Pinellas","Clermont":"Lake","Cocoa":"Brevard","Coral Gables":"Miami-Dade","Coral Springs":"Broward","Crestview":"Okaloosa","Dania Beach":"Broward","Davie":"Broward","Daytona Beach":"Volusia","Deerfield Beach":"Broward","Delray Beach":"Palm Beach","Deltona":"Volusia","Doral":"Miami-Dade","Dunedin":"Pinellas","Edgewater":"Volusia","Eustis":"Lake","Fort Lauderdale":"Broward","Fort Myers":"Lee","Fort Pierce":"St. Lucie","Fort Walton Beach":"Okaloosa","Gainesville":"Alachua","Greenacres":"Palm Beach","Hallandale Beach":"Broward","Hialeah":"Miami-Dade","Hollywood":"Broward","Homestead":"Miami-Dade","Jacksonville":"Duval","Jupiter":"Palm Beach","Key West":"Monroe","Kissimmee":"Osceola","Lake City":"Columbia","Lake Worth":"Palm Beach","Lakeland":"Polk","Largo":"Pinellas","Lauderhill":"Broward","Leesburg":"Lake","Margate":"Broward","Melbourne":"Brevard","Miami":"Miami-Dade","Miami Beach":"Miami-Dade","Miami Gardens":"Miami-Dade","Miramar":"Broward","Naples":"Collier","New Smyrna Beach":"Volusia","North Miami":"Miami-Dade","North Miami Beach":"Miami-Dade","North Port":"Sarasota","Ocala":"Marion","Orlando":"Orange","Ormond Beach":"Volusia","Oviedo":"Seminole","Palm Bay":"Brevard","Palm Beach Gardens":"Palm Beach","Palm Coast":"Flagler","Panama City":"Bay","Pembroke Pines":"Broward","Pensacola":"Escambia","Pinellas Park":"Pinellas","Plant City":"Hillsborough","Plantation":"Broward","Pompano Beach":"Broward","Port Orange":"Volusia","Port St. Lucie":"St. Lucie","Riviera Beach":"Palm Beach","Sanford":"Seminole","Sarasota":"Sarasota","Sebastian":"Indian River","St. Augustine":"St. Johns","St. Cloud":"Osceola","St. Petersburg":"Pinellas","Sunrise":"Broward","Tallahassee":"Leon","Tamarac":"Broward","Tampa":"Hillsborough","Titusville":"Brevard","Venice":"Sarasota","Vero Beach":"Indian River","Wellington":"Palm Beach","West Palm Beach":"Palm Beach","Weston":"Broward","Winter Garden":"Orange","Winter Haven":"Polk","Winter Park":"Orange","Winter Springs":"Seminole",
+  },
   NY: {
     "Albany":"Albany","Amsterdam":"Montgomery","Auburn":"Cayuga","Binghamton":"Broome",
     "Buffalo":"Erie","Canandaigua":"Ontario","Cohoes":"Albany","Corning":"Steuben",
@@ -158,6 +161,9 @@ export const COUNTY_HEALTH_PHONES: Record<string, Record<string, string>> = {
     "Orleans":"(802) 334-6707","Rutland":"(802) 786-5826","Washington":"(802) 223-2340",
     "Windham":"(802) 257-2880","Windsor":"(802) 674-7366",
   },
+  FL: {
+    "Alachua":"(352) 334-7900","Bay":"(850) 872-4455","Brevard":"(321) 633-2100","Broward":"(954) 467-4700","Charlotte":"(941) 624-7200","Citrus":"(352) 527-0068","Clay":"(904) 278-7550","Collier":"(239) 252-8200","Columbia":"(386) 758-1068","Duval":"(904) 253-1000","Escambia":"(850) 595-6500","Flagler":"(386) 437-7350","Hernando":"(352) 540-6800","Hillsborough":"(813) 307-8000","Indian River":"(772) 794-7400","Lake":"(352) 253-4900","Lee":"(239) 690-2100","Leon":"(850) 606-8000","Manatee":"(941) 748-0747","Marion":"(352) 629-0137","Miami-Dade":"(305) 324-2400","Monroe":"(305) 293-7500","Okaloosa":"(850) 689-7724","Orange":"(407) 858-1400","Osceola":"(407) 343-2000","Palm Beach":"(561) 840-4500","Pinellas":"(727) 824-6900","Polk":"(863) 519-8208","Sarasota":"(941) 861-2900","Seminole":"(407) 665-3000","St. Johns":"(904) 824-6000","St. Lucie":"(772) 462-3800","Volusia":"(386) 274-0629",
+  },
   NY: {
     "Albany":"(518) 447-4580","Allegany":"(585) 268-9250","Broome":"(607) 778-3911",
     "Cattaraugus":"(716) 938-9111","Cayuga":"(315) 253-1560","Chautauqua":"(716) 753-4481",
@@ -211,6 +217,9 @@ export const PUBLIC_WORKS_PHONES: Record<string, Record<string, string>> = {
     "Rutland":"(802) 775-4274","Windsor":"(802) 885-4501","Addison":"(802) 388-6724",
     "Franklin":"(802) 524-3341","Bennington":"(802) 442-6321",
   },
+  FL: {
+    "Alachua":"(352) 374-5245","Bay":"(850) 248-8470","Brevard":"(321) 633-2054","Broward":"(954) 831-4000","Charlotte":"(941) 764-4940","Collier":"(239) 252-8192","Duval":"(904) 630-2489","Escambia":"(850) 595-3490","Hillsborough":"(813) 272-5977","Lake":"(352) 343-9760","Lee":"(239) 533-8000","Leon":"(850) 606-1500","Manatee":"(941) 708-7450","Marion":"(352) 671-8686","Miami-Dade":"(305) 375-2090","Orange":"(407) 836-7900","Osceola":"(407) 742-0200","Palm Beach":"(561) 684-4000","Pinellas":"(727) 464-4751","Polk":"(863) 534-6090","Sarasota":"(941) 861-5000","Seminole":"(407) 665-5600","St. Johns":"(904) 209-0120","St. Lucie":"(772) 462-1707","Volusia":"(386) 736-5953",
+  },
   NY: {
     "Albany":"(518) 434-5780","Erie":"(716) 858-6800","Monroe":"(585) 753-7700",
     "Nassau":"(516) 571-6900","Onondaga":"(315) 435-3460","Suffolk":"(631) 852-4000",
@@ -229,6 +238,7 @@ export const STATE_DEP_PHONES: Record<string, string> = {
   RI: "(401) 222-4700",
   NH: "(603) 271-3503",
   ME: "(207) 287-7688",
+  FL: "(850) 245-2118",
   NY: "(518) 402-8545",
 };
 
@@ -239,6 +249,7 @@ export const STATE_FIRE_MARSHAL_PHONES: Record<string, string> = {
   RI: "(401) 462-0577",
   NH: "(603) 223-4289",
   ME: "(207) 626-3880",
+  FL: "(850) 413-3601",
   NY: "(518) 474-6746",
 };
 
@@ -249,6 +260,7 @@ export const ARMY_CORPS_PHONES: Record<string, string> = {
   RI: "(978) 318-8238",
   NH: "(978) 318-8238",
   ME: "(978) 318-8238",
+  FL: "(904) 232-2241",
   NY: "(917) 790-8000",
 };
 
@@ -259,6 +271,7 @@ export const EPA_PHONES: Record<string, string> = {
   RI: "(888) 372-7341",
   NH: "(888) 372-7341",
   ME: "(888) 372-7341",
+  FL: "(404) 562-9900",
   NY: "(212) 637-3000",
 };
 
@@ -296,6 +309,9 @@ export const PLANNING_PHONES: Record<string, Record<string, string>> = {
     "Burlington":"(802) 865-7144","South Burlington":"(802) 846-4106","Rutland":"(802) 773-1800",
     "Barre":"(802) 476-0245","Montpelier":"(802) 223-9502","St. Albans":"(802) 524-2194",
     "Winooski":"(802) 655-6410","Newport":"(802) 334-6720","Vergennes":"(802) 877-2841",
+  },
+  FL: {
+    "Jacksonville":"(904) 255-7800","Miami":"(305) 416-1400","Tampa":"(813) 274-8211","Orlando":"(407) 246-2269","St. Petersburg":"(727) 893-7422","Hialeah":"(305) 883-5830","Tallahassee":"(850) 891-6550","Fort Lauderdale":"(954) 828-6520","Cape Coral":"(239) 574-0553","Pembroke Pines":"(954) 435-6510","Hollywood":"(954) 967-4200","Miramar":"(954) 602-3200","Gainesville":"(352) 334-5045","Coral Springs":"(954) 344-1130","West Palm Beach":"(561) 822-1510","Clearwater":"(727) 562-4741","Pompano Beach":"(954) 786-4661","Lakeland":"(863) 834-6011","Davie":"(954) 797-1056","Boca Raton":"(561) 393-7750",
   },
   NY: {
     "New York City":"(212) 720-3300","Buffalo":"(716) 851-5555","Rochester":"(585) 428-7110",
