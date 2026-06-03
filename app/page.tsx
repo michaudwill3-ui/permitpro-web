@@ -209,6 +209,9 @@ export default function Home() {
                     <div style={{ fontSize: 11, color: "#555", lineHeight: 1.6, padding: "14px 0", borderTop: "1px solid #222", marginTop: 8 }}>
             <strong style={{ color: "#888" }}>DISCLAIMER:</strong> PermitPro is an informational tool only. This checklist is not legal, governmental, or safety advice. Permit requirements, codes, and safety standards vary by jurisdiction and change frequently. Always verify all requirements with the appropriate local, state, and federal authorities before starting any work. PermitPro and its operators assume no liability for errors, omissions, inaccuracies, or any reliance placed on this information.
           </div>
+                    <div style={{ fontSize: 9, color: "#777", lineHeight: 1.6, padding: "14px 0", borderTop: "1px solid #222", marginTop: 8 }}>
+            PermitPro is a permit guidance tool for informational purposes only. Nothing provided constitutes legal advice or permission to begin work. Permit requirements and codes vary by jurisdiction and are subject to change. Always verify with your local building department before starting any project. PermitPro assumes no liability for inaccurate or outdated information.
+          </div>
           <button onClick={reset} style={{ background: "transparent", border: "1px solid #333", color: "#fff", borderRadius: 6, padding: "12px 24px", fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, letterSpacing: "0.05em", textTransform: "uppercase" }}>
             ← New Search
           </button>
