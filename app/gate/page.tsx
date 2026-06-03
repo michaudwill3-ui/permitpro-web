@@ -19,7 +19,7 @@ export default function Gate() {
       });
       const data = await res.json();
       if (data.valid) {
-        sessionStorage.setItem("pp_access", code.trim().toUpperCase());
+        localStorage.setItem("pp_access", code.trim().toUpperCase());
         window.location.href = "/";
       } else {
         setError("Invalid access code. Please contact PermitPro to get access.");

@@ -28,7 +28,7 @@ ${materials.length>0?`<h2>Code-Required Materials & Specs</h2>${materials.map(m=
 
 export default function Home() {
   useEffect(() => {
-    const access = sessionStorage.getItem("pp_access");
+    const access = localStorage.getItem("pp_access");
     if (!access) window.location.href = "/gate";
   }, []);
 
