@@ -1,4 +1,5 @@
 import { getDeptPhone } from "./dept_phones";
+import { FL_OVERRIDES, getWMDPhone, getFDEPPhone } from "./fl_overrides";
 
 export interface PermitRequirement {
   permitName: string;
@@ -336,7 +337,31 @@ export function getChecklist(trade: string, jobType: string, state: string, city
   const data = PERMIT_DATA[key];
   if (!data) return { safetyAlerts: [], permits: [] };
 
-  const [safetyAlerts, permits] = data;
+  let [safetyAlerts, permits] = data;
+
+  // Apply Florida-specific overrides
+  if (state === "FL") {
+    const overrideKey = `${trade}|${jobType}`;
+    const override = FL_OVERRIDES[overrideKey];
+    if (override) {
+      // Add FL-specific safety alerts
+      if (override.addAlerts) {
+        safetyAlerts = [...safetyAlerts, ...override.addAlerts];
+      }
+      // Replace all safety alerts if specified
+      if (override.replaceAlerts) {
+        safetyAlerts = override.replaceAlerts;
+      }
+      // Remove specified permits
+      if (override.removePermitNames) {
+        permits = permits.filter(p => !override.removePermitNames!.includes(p.permitName));
+      }
+      // Add FL-specific permits
+      if (override.addPermits) {
+        permits = [...permits, ...override.addPermits];
+      }
+    }
+  }
 
   const buildingPhone = city && state ? (STATE_PHONES[state]?.[city] || "") : "";
 
@@ -345,6 +370,19 @@ export function getChecklist(trade: string, jobType: string, state: string, city
     let phone = "";
     if (dept.includes("building") || dept === "building") {
       phone = buildingPhone;
+    } else if (state === "FL") {
+      // Florida-specific department routing
+      if (dept.includes("fdep") || dept.includes("fl dept of environmental") || dept.includes("cccl")) {
+        phone = getFDEPPhone(city);
+      } else if (dept.includes("water management") || dept.includes("wmd")) {
+        phone = getWMDPhone(city);
+      } else if (dept.includes("fl dept of health") || dept.includes("fdoh") || dept.includes("ostds")) {
+        phone = getDeptPhone("Health", state, city);
+      } else if (dept.includes("board of trustees") || dept.includes("sovereignty")) {
+        phone = "(850) 245-2555"; // FL Dept of Environmental Protection - State Lands
+      } else {
+        phone = getDeptPhone(permit.department, state, city);
+      }
     } else {
       phone = getDeptPhone(permit.department, state, city);
     }
