@@ -31,7 +31,7 @@ export default function Gate() {
   }
 
   return (
-    <div style={{ width: "100%", minHeight: "100vh", background: "#0a0a0a", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: 24 }}>
+    <div style={{ width: "100%", minHeight: "100vh", background: "#0a0a0a", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", textAlign: "center", padding: 24 }}>
       <div style={{ width: "100%", maxWidth: 420 }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <Image src="/logo.png" alt="PermitPro" width={200} height={50} style={{ objectFit: "contain" }} priority />
