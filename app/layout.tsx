@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: { icon: "/favicon.png" },
   title: "PermitPro",
   description: "Know every permit before you pull up to the job.",
 };
