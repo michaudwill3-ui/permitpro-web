@@ -34,8 +34,7 @@ export default function Gate() {
     <div style={{ width: "100%", minHeight: "100vh", background: "#0a0a0a", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: 24 }}>
       <div style={{ width: "100%", maxWidth: 420 }}>
         <div style={{ textAlign: "center", marginBottom: 40, display: "flex", justifyContent: "center" }}>
-          <div style={{ display: "flex", justifyContent: "center" }}><Image src="/logo.png" alt="PermitPro" width={200} height={50} style={{ objectFit: "contain" }} priority /></div>
-        <div style={{ fontSize: 12, color: "#888", textAlign: "center", marginTop: 10, letterSpacing: "0.04em" }}>The permit intelligence platform for contractors.</div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }}><Image src="/logo.png" alt="PermitPro" width={260} height={65} style={{ objectFit: "contain" }} priority /><div style={{ fontSize: 12, color: "#888", letterSpacing: "0.04em" }}>The permit intelligence platform for contractors.</div></div>
         </div>
         <div style={{ background: "#111", border: "1px solid #222", borderRadius: 10, padding: 32 }}>
           <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 6 }}>Enter Access Code</div>
